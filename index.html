@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Моё портфолио веб-разработчика">
+<title>Portfolio | Web Developer</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #171717;
+}
+
+header {
+  height: 75px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  margin-left: 22px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.hero {
+  min-height: 570px;
+  padding: 130px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tag {
+  color: #777;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 82px);
+  letter-spacing: -4px;
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #888;
+}
+
+.hero p {
+  color: #777;
+  max-width: 430px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.btn {
+  display: inline-block;
+  background: #171717;
+  color: white;
+  padding: 16px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #555;
+  transform: translateY(-4px);
+}
+
+section {
+  padding: 85px 8%;
+}
+
+.section-tag {
+  color: #999;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 36px;
+  letter-spacing: -1px;
+  margin-bottom: 35px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 30px;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  background: #fff;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px #00000010;
+}
+
+.number {
+  color: #aaa;
+  font-size: 13px;
+  margin-bottom: 35px;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 21px;
+}
+
+.card p {
+  color: #888;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.about {
+  background: #f8f8f8;
+}
+
+.about p {
+  max-width: 600px;
+  color: #777;
+  line-height: 1.9;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  color: #888;
+  margin-bottom: 30px;
+}
+
+footer {
+  border-top: 1px solid #eee;
+  padding: 30px 8%;
+  display: flex;
+  justify-content: space-between;
+  color: #999;
+  font-size: 13px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(max-width: 600px) {
+  header {
+    padding: 0 5%;
+  }
+
+  nav a {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 100px 6%;
+    min-height: 500px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  section {
+    padding: 65px 6%;
+  }
+
+  footer {
+    padding: 25px 6%;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">PORTFOLIO.</div>
+  <nav>
+    <a href="#projects">Проекты</a>
+    <a href="#about">Обо мне</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+</header>
+
+<main>
+
+<div class="hero">
+  <div class="tag">WEB DEVELOPER • 2026</div>
+
+  <h1>Создаю сайты.<br>
+  <span>Создаю идеи.</span></h1>
+
+  <p>
+    Изучаю веб-разработку и создаю
+    современные цифровые проекты.
+    Это моё начало большого пути.
+  </p>
+
+  <a href="#projects" class="btn">Смотреть проекты →</a>
+</div>
+
+<section id="projects">
+  <div class="section-tag">01 / МОИ РАБОТЫ</div>
+  <h2>Мои проекты</h2>
+
+  <div class="cards">
+
+    <div class="card reveal">
+      <div class="number">PROJECT 01</div>
+      <h3>Portfolio</h3>
+      <p>Мой персональный сайт с современным дизайном.</p>
+    </div>
+
+    <div class="card reveal">
+      <div class="number">PROJECT 02</div>
+      <h3>Landing Page</h3>
+      <p>Страница для презентации продукта или услуги.</p>
+    </div>
+
+    <div class="card reveal">
+      <div class="number">PROJECT 03</div>
+      <h3>Coming Soon</h3>
+      <p>Новые интересные проекты скоро появятся здесь.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-tag">02 / ОБО МНЕ</div>
+  <h2>Немного обо мне</h2>
+
+  <p>
+    Я начинающий веб-разработчик.
+    Изучаю HTML, CSS и JavaScript,
+    экспериментирую с дизайном
+    и учусь создавать полезные сайты.
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-tag">03 / СВЯЗЬ</div>
+  <h2>Есть идея?</h2>
+  <p>Буду рад обсудить интересный проект.</p>
+
+  <a class="btn" href="https://t.me/Wel4ikRemote">
+    Написать в Telegram →
+  </a>
+</section>
+
+</main>
+
+<footer>
+  <span>PORTFOLIO.</span>
+  <span>© 2026</span>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+document.querySelectorAll('.reveal').forEach(element => {
+  observer.observe(element);
+});
+</script>
+
+</body>
+</html>
+
